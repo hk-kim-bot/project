@@ -8,8 +8,21 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="bannerimg">
-    <img src="images/bannershoes.jpg" alt="">
+  <div class="banner">
+      <ul class="bannerimgs">
+        <li class="bannerimg">
+          <img src="images/bannershoes.jpg" alt="" class="img_banner">
+  
+        </li>
+        <li class="bannerimg">
+          <img src="images/bannershoes2.jpg" alt="" class="img_banner">
+  
+        </li>
+        <li class="bannerimg">
+          <img src="images/bannershoes3.jpg" alt="" class="img_banner">
+  
+        </li>
+      </ul>
   </div>
   <div class="brands">
     <h1>Brand</h1>
@@ -267,6 +280,29 @@
     }
   
 }
+
+    let img = document.querySelectorAll(".bannerimg");
+    let totalslide = img.length;
+    
+    var sliderWidth = 100; // container의 width
+    var slideIndex = 0;
+    var slider = document.querySelector('.bannerimgs');
+    slider.style.width = sliderWidth * totalslide + '%';
+
+    slide()
+
+    function slide(){
+      for(var i =0;i<totalslide;i++){
+        slider.style.left = -(sliderWidth * slideIndex) + '%';  
+        console.log(slideIndex) 
+      }
+      slideIndex++;
+      if(slideIndex === totalslide){
+        slideIndex=0;
+      }
+      setTimeout(slide, 2000); 
+    }
+
 </script>
 </body>
 </html>
