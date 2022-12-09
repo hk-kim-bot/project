@@ -5,12 +5,16 @@
 }
 .header{
   width: 100%;
+
   min-width: 1000px;
   height: fit-content;
+
+
   border-bottom: 1px solid green;
   margin: 10px 0;
 
 }
+
 .headermain{
   width: 100%;
   height: fit-content;
@@ -21,10 +25,12 @@
   width:380px ;
 }
 .search{
+
   width: 20%;
   height: 108px;
   position: relative;
 }
+
 
 .search input{
   width: 100%;
@@ -35,7 +41,9 @@
   box-sizing: content-box;
 }
 .search input:focus {
-  
+
+
+
   outline: none;
 }
 .search #search-icon{
@@ -60,7 +68,9 @@
   background-color: rgba(128, 128, 128,0.4);
 }
 .nav{
+
   width: 25%;
+
 }
 .nav ul{
   list-style-type: none;
@@ -73,10 +83,13 @@
   font-weight: bold;
 }
 
+
+
 .nav ul li a{
   text-decoration: none;
   color: green;
 }
+
 .headernav{
   width: 100%;
   height: fit-content;
