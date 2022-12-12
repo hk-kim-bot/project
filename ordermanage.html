@@ -18,7 +18,8 @@
         <option value="five">주문일자</option>
       </select>
         <input type="text" id="ordertext">
-        <button type="submit" onclick="ffind()">검색</button>
+        <button type="submit" onclick="findlist()">검색</button>
+        <button type="submit" onclick="resetlist()">초기화</button>
     </div>
     <table class="ordertable">
       <tr>
@@ -28,90 +29,76 @@
         <th>수량</th>
         <th>주문일자</th>
       </tr>
-      <div class="orderinfo">
+     
         <tr class="oderinfo_tr">
           <td class="one">1232435_11</td>
-          <td class="two">adidas_black</td>
-          <td class="three">57,000원</td>
+          <td class="two">nike_black</td>
+          <td class="three">66,000원</td>
           <td class="four">1</td>
-          <td class="five">22/12/12</td>
+          <td class="five">15/10/31</td>
         </tr>
-      </div>
-      <div class="orderinfo">
+      
+      
         <tr class="oderinfo_tr">
-          <td class="one">1232435_11</td>
+          <td class="one">87556_11</td>
           <td class="two">adidas_black</td>
           <td class="three">57,000원</td>
-          <td class="four">1</td>
-          <td class="five">22/12/12</td>
+          <td class="four">3</td>
+          <td class="five">17/2/20</td>
         </tr>
-      </div>
-      <div class="orderinfo">
+      
+
         <tr class="oderinfo_tr">
-          <td class="one">1232435_11</td>
-          <td class="two">adidas_black</td>
-          <td class="three">57,000원</td>
-          <td class="four">1</td>
-          <td class="five">22/12/12</td>
+          <td class="one">15666666_11</td>
+          <td class="two">adidas_white</td>
+          <td class="three">6,000원</td>
+          <td class="four">17</td>
+          <td class="five">22/10/11</td>
         </tr>
-      </div>
-      <div class="orderinfo">
+ 
+
         <tr class="oderinfo_tr">
-          <td class="one">1232435_11</td>
-          <td class="two">adidas_black</td>
-          <td class="three">57,000원</td>
-          <td class="four">1</td>
-          <td class="five">22/12/12</td>
+          <td class="one">777777_11</td>
+          <td class="two">puma_black</td>
+          <td class="three">13,000원</td>
+          <td class="four">8</td>
+          <td class="five">20/12/12</td>
         </tr>
-      </div>
-      <div class="orderinfo">
+
+
         <tr class="oderinfo_tr">
           <td class="one">99999999</td>
           <td class="two">adidas_black</td>
-          <td class="three">57,000원</td>
-          <td class="four">1</td>
-          <td class="five">22/12/12</td>
+          <td class="three">8,000원</td>
+          <td class="four">2</td>
+          <td class="five">12/06/16</td>
         </tr>
-      </div>
+    
     </table>
   </div>
   <script>
-      function findorder(){
-        let  search = document.getElementById("ordertext").value; //검색어 입력input
-        let items =document.querySelectorAll(".orderinfo") //검색당할 물건
-        let findvalue= document.getElementById("orderfindvalue").value;
-        let oneclass= document.querySelector(".one").textContent;
-
-        items.forEach((item)=>{
-          
-          let ordernum = item.querySelector(`findvalue`)
-
-         
-          if(item.textContent.includes(search)){
-              //textContent - html 제외한 텍스트만 보여줌
-              //검색어를 포함 한 아이템
-              item.style.display="block";
-
-            }else{
-              //검색어를 포함하지 않은 아이템
-              item.style.display="none";
-            }
-
-
-          })
-       
-      }
-      function ffind(){
-        let svalue = document.querySelector("#orderfindvalue").value;
-        let table = document.querySelectorAll(".orderinfo_tr");
-        let inputvalue=document.querySelector("#ordertext").value;
-        let aa = document.querySelectorAll(".two")
+      
+      function findlist(){
+        let svalue = document.querySelector("#orderfindvalue").value; //select 의 값
+        let table = document.querySelectorAll(".oderinfo_tr"); //주문현황을 가진 테이블의 모든 값을 가져옴
+        let inputvalue=document.querySelector("#ordertext").value; // 검색창에 입력된 값을 가져옴
+        
       
         table.forEach((item)=>{
-          console.log(item)
-          console.log(item.querySelector(".one"))
+          let id = item.querySelector("."+svalue).textContent // item중에 select의 값을 가지는 class를 검색- 안에 쓰인 텍스트를 가져옴
+          if(id.includes(inputvalue)){  //검색창에 입력한 값이 있으면
+            item.style.display=""; //화면 보이기 
+          }else{ //검색창에 입력한 값이 없으면 
+            item.style.display="none";//화면에서 안보이기
+          }
         })
       
+      }
+      function resetlist(){
+        let table = document.querySelectorAll(".oderinfo_tr"); //주문현황을 가진 테이블의 모든 값을 가져옴
+        table.forEach((item)=>{
+          item.style.display="";
+        })
       }
   </script>
 </body>
