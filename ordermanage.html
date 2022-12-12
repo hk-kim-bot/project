@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/ordermanage.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="ordersinfo">
+    <div class="orderstatus">
+      <select name="" id="orderfindvalue">
+        <option value="one" selected>주문번호</option>
+        <option value="two">주문상품</option>
+        <option value="three">상품금액</option>
+        <option value="four">수량</option>
+        <option value="five">주문일자</option>
+      </select>
+        <input type="text" id="ordertext">
+        <button type="submit" onclick="ffind()">검색</button>
+    </div>
+    <table class="ordertable">
+      <tr>
+        <th>주문번호</th>
+        <th>주문상품</th>
+        <th>상품금액</th>
+        <th>수량</th>
+        <th>주문일자</th>
+      </tr>
+      <div class="orderinfo">
+        <tr class="oderinfo_tr">
+          <td class="one">1232435_11</td>
+          <td class="two">adidas_black</td>
+          <td class="three">57,000원</td>
+          <td class="four">1</td>
+          <td class="five">22/12/12</td>
+        </tr>
+      </div>
+      <div class="orderinfo">
+        <tr class="oderinfo_tr">
+          <td class="one">1232435_11</td>
+          <td class="two">adidas_black</td>
+          <td class="three">57,000원</td>
+          <td class="four">1</td>
+          <td class="five">22/12/12</td>
+        </tr>
+      </div>
+      <div class="orderinfo">
+        <tr class="oderinfo_tr">
+          <td class="one">1232435_11</td>
+          <td class="two">adidas_black</td>
+          <td class="three">57,000원</td>
+          <td class="four">1</td>
+          <td class="five">22/12/12</td>
+        </tr>
+      </div>
+      <div class="orderinfo">
+        <tr class="oderinfo_tr">
+          <td class="one">1232435_11</td>
+          <td class="two">adidas_black</td>
+          <td class="three">57,000원</td>
+          <td class="four">1</td>
+          <td class="five">22/12/12</td>
+        </tr>
+      </div>
+      <div class="orderinfo">
+        <tr class="oderinfo_tr">
+          <td class="one">99999999</td>
+          <td class="two">adidas_black</td>
+          <td class="three">57,000원</td>
+          <td class="four">1</td>
+          <td class="five">22/12/12</td>
+        </tr>
+      </div>
+    </table>
+  </div>
+  <script>
+      function findorder(){
+        let  search = document.getElementById("ordertext").value; //검색어 입력input
+        let items =document.querySelectorAll(".orderinfo") //검색당할 물건
+        let findvalue= document.getElementById("orderfindvalue").value;
+        let oneclass= document.querySelector(".one").textContent;
+
+        items.forEach((item)=>{
+          
+          let ordernum = item.querySelector(`findvalue`)
+
+         
+          if(item.textContent.includes(search)){
+              //textContent - html 제외한 텍스트만 보여줌
+              //검색어를 포함 한 아이템
+              item.style.display="block";
+
+            }else{
+              //검색어를 포함하지 않은 아이템
+              item.style.display="none";
+            }
+
+
+          })
+       
+      }
+      function ffind(){
+        let svalue = document.querySelector("#orderfindvalue").value;
+        let table = document.querySelectorAll(".orderinfo_tr");
+        let inputvalue=document.querySelector("#ordertext").value;
+        let aa = document.querySelectorAll(".two")
+      
+        table.forEach((item)=>{
+          console.log(item)
+          console.log(item.querySelector(".one"))
+        })
+      
+      }
+  </script>
+</body>
+</html>

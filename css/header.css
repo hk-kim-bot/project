@@ -98,7 +98,7 @@
   
  
 }
-.menu li{
+.menu >li{
   width: 12%;
   height: 100%;
   text-align: center;   
@@ -117,6 +117,14 @@
   color : white;
 }
 
-.menu li:nth-child(5){
-  border-right: 1px solid rgba(0, 0, 255,0.3);
+.submenu {
+  background-color: #eee;
+  width: 161px;
+  color : black;
+  opacity: 0.8;
+  display: none;
+}
+.menu li:hover .submenu {
+  display: block;
+  cursor: pointer;
 }

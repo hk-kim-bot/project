@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.ordersinfo{
+  width: 80%;
+  height: fit-content;
+}
+.orderstatus{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.orderstatus input[type="text"]{
+  
+  padding: 0.3em;
+  background-color: rgba(128, 128, 128, 0.301);
+  border-radius: 5px;
+} 
+.orderstatus input[type="text"]:focus{
+  background-color: white;
+  
+  outline: none;
+  border-radius: 5px;
+}
+.ordertable{
+  width: 80%;
+  margin: 0 auto;
+}
+table, th,td{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 1em;
+}
+th{
+  background-color: rgba(128, 128, 128, 0.24);
+}
+td:nth-child(3){
+  color: red;
+}
