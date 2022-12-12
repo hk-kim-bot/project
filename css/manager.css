@@ -1,0 +1,65 @@
+*{padding: 0;margin: 0;}
+.managerpage{
+  width: 100%;
+}
+.manager_nav{
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  background-color: gray;
+}
+.manager_nav li{
+  width: 15%;
+  background-color: rgba(160, 159, 159, 0.24);
+  text-align: center;
+  line-height: 8vh;
+  border: 0.5px solid black;
+
+}
+.manager_nav li a{
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+
+}
+.manager_list{
+  width: 10%;
+  height: 80vh;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.096);
+}
+.manager_list li{
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(128, 128, 128, 0.349);
+  
+}
+.manager_list li a{
+  color: gray;
+  font-size: medium;
+  font-weight: 600;
+  text-decoration: none;
+}
+.manager_list li:last-child{
+  height: fit-content;
+  color: gray;
+  font-size: medium;
+  font-weight: 800;
+}
+.manager_search{
+  padding: 10%;
+  background-color: rgba(70, 43, 226, 0.205);
+}
+.manager_search label,
+.manager_search input{
+  width: 100%;
+}
+.manager_search label{
+  font-size: small;
+  color: white;
+}
