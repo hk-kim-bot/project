@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-
 .banner{
   width: 100%;
   height: 36vh;
@@ -11,22 +10,19 @@
   overflow: hidden;
 }
 .bannerimgs{
-  
-  width: 100%;
   display: flex;
   position: absolute;
   justify-content: center;
+  
 }
 .bannerimg{
-  
   width: 100%;
   list-style: none;
+  
 }
 .bannerimg img{
   
-
-  display: block;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .brands{
