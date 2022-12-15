@@ -25,6 +25,9 @@
   text-decoration: none;
 
 }
+.manager_tools{
+  display: flex;
+}
 .manager_list{
   width: 10%;
   height: 80vh;
@@ -62,4 +65,10 @@
 .manager_search label{
   font-size: small;
   color: white;
+}
+.manager_main{
+  background-color: rgba(128, 128, 128, 0.212); 
+  width: 80%;
+  height: fit-content;
+  margin: auto;
 }

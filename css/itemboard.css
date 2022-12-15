@@ -1,0 +1,21 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.itemboard_manage{
+  width: 100%;
+  
+}
+.itemboard_manage table,
+.itemboard_manage th,
+.itemboard_manage td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1em;
+}
+.itemstatus{
+  padding: 5px;
+}
+.item_info_table{
+  margin: 1em;
+}

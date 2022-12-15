@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/iteminput.css">
+  <link rel="stylesheet" href="../css/iteminput.css">
   <title>Document</title>
 </head>
 <body>
   <!-- 관리자 상품등록 페이지 입니다.-->
+  <!-- 모든 값을 가져오기 -->
   <div class="itemform_container">
     <form action="" method="" name="" class="inputform">
     <table>
@@ -22,8 +23,8 @@
 
             </td>
             <td>
-              <input type="text" name="" id="" class="">
-
+              <input type="text" name="" id="" class="" readonly value="조던"> <!---->
+              <input type="hidden" name="" id="" ><!-- id 값 저장하는 히든input-->
             </td>
           </tr>
           <tr>
@@ -32,7 +33,7 @@
 
             </td>
             <td>
-              <input type="text" name="" id="" class="">
+              <input type="text" name="" id="" class="" readonly value="NIKE">
 
             </td>
           </tr>
@@ -49,6 +50,45 @@
                 <option value="260">260</option>
                 <option value="270">270</option>
                 <option value="280">280</option>
+              </select>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">가격</label>
+            </td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">용도</label>
+            </td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">재질</label>
+            </td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">색상(중복가능)</label>
+
+            </td>
+            <td>
+              <select name="" id="" multiple >
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="black">black</option>
+                <option value="white">white</option>
               </select>
 
             </td>
@@ -97,7 +137,7 @@
 
             </td>
           </tr>
-          
+       
           
           
         </table>
