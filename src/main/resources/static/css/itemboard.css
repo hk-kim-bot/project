@@ -1,0 +1,26 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.itemboard_manage,
+.item_stock_page{
+  width: 100%;
+  
+}
+.itemboard_manage table,
+.itemboard_manage th,
+.itemboard_manage td,
+.item_stock_page table,
+.item_stock_page th,
+.item_stock_page td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1em;
+}
+.itemstatus{
+  padding: 5px;
+}
+.item_info_table,
+.item_stock{
+  margin: 1em;
+}
