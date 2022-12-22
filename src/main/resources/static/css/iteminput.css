@@ -39,3 +39,18 @@ button{
   margin-left: 1em;
 
 }
+.itemupdate_container{
+	display: block;
+  margin:0 20px;
+  margin-top:20px;
+}
+.stockupdate_container{
+	width:700px;
+	height:500px;
+}
+.stockupdate_container button{
+	margin:1em 2em;
+}
+.stockchangeform{
+	margin:2em;
+}

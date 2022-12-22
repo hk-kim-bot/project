@@ -9,6 +9,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/manager.css">
+
+  <script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
   <title>관리자 상품관리 페이지</title>
 </head>
 <body>
@@ -49,22 +53,23 @@
 	   box.innerHTML="";
   	if(e.dataset.clk==1){
   		box.innerHTML=`<%@ include file="itemform.jsp" %>`;
-  		console.log(1);
+  		
    	}else if(e.dataset.clk==2){
    		box.innerHTML=`<%@ include file="itemboard.jsp" %>`;
-   		console.log(2);
+   		
    	}else if(e.dataset.clk==3){
    		box.innerHTML=`<%@ include file="ordermanage.jsp" %>`;
-   		console.log(3);
+   	
    	}else if(e.dataset.clk==4){
    		box.innerHTML=`<%@ include file="itemstock.jsp" %>`;
-   		console.log(4);
+   		
    	}
 	   
 	   
    }
   </script>
-<script src="/js/manager.js">
-</script>
+<script type="text/javascript" src="/js/manager.js"></script>
+
+
 </body>
 </html>

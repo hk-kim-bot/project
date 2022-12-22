@@ -22,8 +22,8 @@
         <option value="six">주문자</option>
       </select>
         <input type="text" id="ordertext">
-        <button type="submit" onclick="findlist()">검색</button>
-        <button type="submit" onclick="resetlist()">초기화</button>
+        <button type="submit" onclick="findorder()">검색</button>
+        <button type="submit" onclick="resetorder()">초기화</button>
     </div>
     <table class="ordertable">
       <tr>

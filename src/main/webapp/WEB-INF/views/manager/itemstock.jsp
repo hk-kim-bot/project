@@ -1,49 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/itemboard.css">
-  <title>Document</title>
-</head>
-<body>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <link rel="stylesheet" href="/css/itemboard.css">
 	<div class=item_stock_page>
-	<h1>GREEN SHOES 재고현황</h1>
+	<h3>GREEN SHOES 재고현황 / 변경페이지</h3>
   <table class="item_stock">
     <tr>
       <th>id</th>
       <th>상품명</th>
       <th>사이즈</th>
       <th>수량</th>
+      <th>비고</th>
     </tr>
+  <c:forEach var="sizestock" items="${sizestocks.content}">
     <tr class="item_stock_info">
-      <th>1</th>
-      <th>조던</th>
-      <th>240</th>
-      <th>15</th>
+      <th><a onclick="changestock(this)">${sizestock.id}</a></th>
+      <th>${sizestock.product_name.product_name }</th>
+      <th>${sizestock.item_size}</th>
+      <th>${sizestock.item_stock}</th>
+      <th>/</th>
     </tr>
-    <tr class="item_stock_info">
-      <th>2</th>
-      <th>조던</th>
-      <th>250</th>
-      <th>14</th>
-    </tr>
-    <tr class="item_stock_info">
-      <th>3</th>
-      <th>조던</th>
-      <th>260</th>
-      <th>12</th>
-    </tr>
-    <tr class="item_stock_info">
-      <th>4</th>
-      <th>조던</th>
-      <th>270</th>
-      <th>10</th>
-    </tr>
+    </c:forEach>
+    
   </table>
+  <div class="darkboard"></div>
+    <div class="itemdetail_popup">
 	</div>
-</body>
-</html>

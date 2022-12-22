@@ -34,9 +34,6 @@ public class testController {
 	public String eventpage() {
 		return "board/event";
 	}
-	@GetMapping("/manager/item")
-	public String manager() {
-		return "manager/manager";
-	}
+
 	
 }

@@ -1,18 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="/css/iteminput.css">
-  <title>Document</title>
-</head>
-<body>
+  
+
   <!-- 관리자 상품등록 페이지 입니다.-->
   <div class="itemform_container">
-    <form action="" method="" name="" class="inputform">
+    <form action="" method="" id="input-form" class="inputform" enctype="multipart/form-data">
     <table>
       <colgroup>
         <col class="col_td1">
@@ -20,121 +14,68 @@
       </colgroup>
           <tr>
             <td>
-              <label for="">제품명</label>
+              <label for="product_name">제품명</label>
 
             </td>
             <td>
-              <input type="text" name="" id="" class="">
-
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="">브랜드</label>
-
-            </td>
-            <td>
-              <input type="text" name="" id="" class="">
+              <input type="text" name="" id="product_name" class="">
 
             </td>
           </tr>
           <tr>
             <td>
-              <label for="">사이즈(중복가능)</label>
+              <label for="brand_name">브랜드</label>
 
             </td>
             <td>
-              <select name="" id="" multiple >
-                <option value="230">230</option>
-                <option value="240">240</option>
-                <option value="250">250</option>
-                <option value="260">260</option>
-                <option value="270">270</option>
-                <option value="280">280</option>
-              </select>
+              <input type="text" name="" id="brand_name" class="">
 
             </td>
           </tr>
+
           <tr>
             <td>
-              <label for="">가격</label>
+              <label for="price">가격</label>
             </td>
             <td>
-              <input type="text" name="" id="">
+              <input type="text" name="" id="price">
             </td>
           </tr>
           <tr>
             <td>
-              <label for="">용도</label>
+              <label for="purpose">용도</label>
             </td>
             <td>
-              <input type="text" name="" id="">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="">재질</label>
-            </td>
-            <td>
-              <input type="text" name="" id="">
+              <input type="text" name="" id="purpose">
             </td>
           </tr>
           <tr>
             <td>
-              <label for="">색상(중복가능)</label>
+              <label for="material">재질</label>
+            </td>
+            <td>
+              <input type="text" name="" id="material">
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <label for="img">사진/이미지</label>
 
             </td>
             <td>
-              <select name="" id="" multiple >
-                <option value="red">red</option>
-                <option value="blue">blue</option>
-                <option value="black">black</option>
-                <option value="white">white</option>
-              </select>
+              <input type="file" name="img" id="img" class="">
 
             </td>
           </tr>
+     
           <tr>
             <td>
-              <label for="">사진/이미지</label>
+              <label for="contents">상세 설명</label>
 
             </td>
             <td>
-              <input type="file" name="" id="" class="">
-
-            </td>
-          </tr>
-          <tr>
-            
-            <td>
-              <label for="">상세 메인 이미지</label>
-              
-            </td>
-            <td>
-              <input type="file" name="" id="" class="">
-              
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td>
-              <label for="">상세 설명 이미지(다중업로드가능)</label>
-              
-            </td>
-            <td>
-              <input type="file" name="" id="" class="" multiple>
-              
-            </td>
-            
-          </tr>
-          <tr>
-            <td>
-              <label for="">상세 설명</label>
-
-            </td>
-            <td>
-              <textarea rows="10" cols="50" name="" id=""></textarea>
+              <textarea rows="10" cols="50" name="" id="contents"></textarea>
 
             </td>
           </tr>
@@ -142,12 +83,9 @@
           
           
         </table>
-        <div class="input_btn">
-          <button type="submit" id="" class="">저장</button>
-          <button type="reset" id="" class="">취소</button>
-
-        </div>
     </form>
+        <button id="item-inputbtn" onclick="manager.input()" >저장</button>
+       
+      
+ 
   </div>
-</body>
-</html>

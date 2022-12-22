@@ -27,13 +27,13 @@
   <div class="brands">
     <h1>Brand</h1>
     <li class="brand">
-      <a href="/manager/item">
+      <a href="/auth/manager">
         <img src="images/aasics.webp" alt="assics">
         <p>assics</p>
       </a>
     </li>
     <li class="brand">
-      <a href="">
+      <a href="/auth/itemaaaa">
         <img src="images/adidas.webp" alt="adidas">
         <p>adidas</p>
       </a>
