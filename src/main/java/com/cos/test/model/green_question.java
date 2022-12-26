@@ -16,10 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
-
-
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -59,6 +56,7 @@ public class green_question {
 	
 	@OneToMany (mappedBy="question", fetch = FetchType.EAGER)
 	private List<green_reply> reply;
+	
 	
 	
 	

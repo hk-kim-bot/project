@@ -11,6 +11,7 @@ let manager={
 			purpose:$("#purpose").val(),
 			material:$("#material").val(),
 			contents:$("#contents").val(),
+			color:$("#color").val()
 		};
 new Promise((succ,fail)=>{
 		$.ajax({ //이미지 먼저 입력
@@ -71,6 +72,7 @@ new Promise((succ,fail)=>{
 			succ();
 		}).fail(function(error){
 			alert(JSON.stringify(error));
+			
 			fail();
 		});
 	
@@ -271,5 +273,14 @@ let size={
 			backpage.style.width=cwidth+"px";
 			backpage.style.height=cheight+"px";
 			backpage.style.backgroundColor='rgba(138, 135, 135, 0.199)';
+		
+		}
+		function subimginput(){
+			let page=document.querySelector(".itemdetail_popup");
+			let productid=document.querySelector("#hiddenproduct_id").value;
+			$.get("/auth/itemimginput/"+productid,function(resp){
+				page.innerHTML=resp;
+			})
+			
 		
 		}

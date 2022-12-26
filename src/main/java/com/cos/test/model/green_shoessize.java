@@ -10,13 +10,25 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="green_shoessize")
+@Table(
+		name="green_shoessize",
+		uniqueConstraints={
+		        @UniqueConstraint(
+		            columnNames={"productid", "item_size"}
+		        )
+		    }
+		
+)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,11 +44,17 @@ public class green_shoessize {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GREEN_SHOESSIZE_SEQ_GENERATOR")
 	private int id;
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="product_name")
-	private green_product product_name;
-	@Column(nullable=false, length=30 ,unique=true)
+	
+	@ManyToOne(fetch = FetchType.EAGER )
+	@JoinColumn(name="productid")
+	@OnDelete(action=OnDeleteAction.CASCADE)
+	private green_product product;
+	
+	@Column(nullable=false, length=30)
 	private String  item_size;  //사이즈
+	
 	@Column(nullable=false, length=30)
 	private int  item_stock;  //재고
+	
+
 }

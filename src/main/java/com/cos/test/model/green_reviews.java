@@ -2,6 +2,7 @@ package com.cos.test.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,6 +15,8 @@ import javax.persistence.SequenceGenerator;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -49,6 +52,7 @@ public class green_reviews {
 	private int count; //조회수
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="reviewimg")
+	@OnDelete(action=OnDeleteAction.CASCADE)
 	private green_product product;  //이미지만 가져오기
 	
 }

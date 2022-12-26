@@ -6,7 +6,7 @@
   <div class="itemboard_manage">
     <div class="itemstatus">
       <select name="" id="itemfindvalue">
-        <option value="one" selected>상품번호</option>
+        <option value="one" selected>번호</option>
         <option value="two">브랜드명</option>
         <option value="three">제품명</option>
         <option value="three">가격</option>
@@ -17,8 +17,8 @@
     </div>
     <table class="item_info_table">
       <tr class="item_info_table_th">
-        <th></th>
-        <th>브랜드</th>
+        <th>/</th>
+        <th>브랜드명</th>
         <th>제품명</th>
         <th>가격</th>
       </tr>

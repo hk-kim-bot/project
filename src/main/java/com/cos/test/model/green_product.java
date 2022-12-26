@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -39,7 +41,7 @@ public class green_product {
 	@Column(nullable=false, length=30,unique=true)
 	private String product_name;  //상품 이름
 	@Column(nullable=false, length=30)
-	private String  price;  //가격
+	private int  price;  //가격
 	@Lob
 	private String  img; //이미지
 	@Column(nullable=false, length=30)
@@ -50,7 +52,9 @@ public class green_product {
 	private String  contents;  //내용
 	@Enumerated(EnumType.STRING)
 	private ProductType status;  //상품의 상태(신상, 중고)
+	@OneToOne(mappedBy="product" )
+	private green_img green_img;
+	@Column(nullable=false,length=50)
+	private String color;
 	
-	
-
 }

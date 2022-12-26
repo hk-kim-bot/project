@@ -38,7 +38,7 @@
               <label for="price">가격</label>
             </td>
             <td>
-              <input type="text" name="" id="price">
+              <input type="text" name="" id="price" placeholder="숫자만 입력">
             </td>
           </tr>
           <tr>
@@ -60,7 +60,7 @@
           
           <tr>
             <td>
-              <label for="img">사진/이미지</label>
+              <label for="img">사진/이미지(최대 50mb)</label>
 
             </td>
             <td>
@@ -79,6 +79,15 @@
 
             </td>
           </tr>
+          <tr>
+          <td> 
+          <label for="color">색상</label>
+          </td>
+          <td>
+          <input type="text" id="color" placeholder="색상" title="문의">
+          </td>
+          </tr>
+          
        
           
           

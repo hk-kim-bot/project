@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cos.test.dto.ResponseDto;
 import com.cos.test.model.green_product;
 import com.cos.test.model.green_shoessize;
-
 import com.cos.test.service.ItemService;
 
 @RestController
@@ -58,6 +57,8 @@ public class ItemControllerapi {
 		itemservice.재고변경(id,green_shoessize);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
+	
+
 
 	
 }

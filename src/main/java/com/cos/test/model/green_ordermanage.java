@@ -2,6 +2,7 @@ package com.cos.test.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -16,6 +17,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,6 +47,7 @@ public class green_ordermanage {
 	private Timestamp orderDate;  // 주문일
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="productid")
+	@OnDelete(action=OnDeleteAction.CASCADE)
 	private green_product product; //주문 상품
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="userid")

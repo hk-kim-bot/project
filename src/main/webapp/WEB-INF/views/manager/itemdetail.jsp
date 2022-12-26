@@ -84,10 +84,18 @@
 
             </td>
           </tr>
+          <tr>
+          <td> 색상
+          </td>
+          <td>
+          ${product.color }
+          </td>
+          </tr>
 
         </table>
         <button onclick="updatedetail()">수정 하기</button>
         <button onclick="manager.delete()">삭제 하기</button>
         <button onclick="inputstock()">수량입력하기 </button>
+        <button onclick="subimginput()">서브이미지입력</button>
         <button type="button" class="itemdetail_popupclose" onclick="closedetail()">닫기</button>
   </div>

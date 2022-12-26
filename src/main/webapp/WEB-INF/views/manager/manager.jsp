@@ -18,8 +18,8 @@
 <body>
   <div class="managerpage">
     <div class="manager_nav">
-      <li><a href="">상품 관리</a></li>
-      <li><a href="">고객 관리</a></li>
+      <li><a href="/auth/manager">상품 관리</a></li>
+      <li><a href="/auth/usermanage">고객 관리</a></li>
       <li><a href="">주문 관리</a></li>
       <li><a href="">게시판 관리</a></li>
       <li><a href="/main">메인페이지</a></li>

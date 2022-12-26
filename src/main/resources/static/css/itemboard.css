@@ -72,3 +72,14 @@
   border-collapse: collapse;
   padding: 1em 2em;
 }
+.imginputpage{
+	margin: 1em;
+	width:700px;
+	height:500px;
+}
+.imginputpage table,
+.imginputpage th{
+	 border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1em 2em;
+}
