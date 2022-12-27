@@ -37,12 +37,22 @@ public class ItemService {
 	
 	static green_img green;	
 	
-	
+	@Transactional
+	public green_product 상품확인(String productname) {
+		green_product refer =itemRepository.findByProductname(productname.toString());
+		return refer;
+	}
 	
 	@Transactional
 	public void 상품입력(green_product pd)  {
-		
 		pd.setStatus(ProductType.NEW);
+		pd.setImg("/downloadimg/"+url);
+		itemRepository.save(pd);
+	}	
+	@Transactional
+	public void 상품입력old(green_product pd)  {
+		
+		pd.setStatus(ProductType.OLD);
 		pd.setImg("/downloadimg/"+url);
 		itemRepository.save(pd);
 	}	

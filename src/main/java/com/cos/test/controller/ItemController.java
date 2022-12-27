@@ -68,4 +68,8 @@ public class ItemController {
 		
 		return "manager/test";
 	}
+	@GetMapping("/auth/old")
+	public String oldinput() {
+		return "old/olditeminput";
+	}
 }

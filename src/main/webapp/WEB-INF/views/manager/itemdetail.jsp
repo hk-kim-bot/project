@@ -5,7 +5,7 @@
 <!-- 제품의 상세사항을 확인 하는 페이지 입니다. -->
 <div class="itemdetail_container">
    	<input type="hidden" value="${product.id }" id="hiddenproduct_id">
-   	<input type="hidden" value="${product.product_name }" id="hiddenproduct_name">
+   	<input type="hidden" value="${product.productname }" id="hiddenproduct_name">
    		<h4>상품상세페이지</h4>
    	    <table>
       <colgroup>
@@ -19,7 +19,7 @@
             </td>
             <td>
               <p>
-              	${product.product_name}
+              	${product.productname}
               </p>
 
             </td>

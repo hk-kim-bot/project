@@ -1,4 +1,34 @@
 let manager={
+	check:function(){
+		let productname=$("#product_name").val()
+		$.ajax({
+			url:'/api/checking',
+			type:'POST',
+			data:productname,
+			contentType:"application/json; charset=utf-8",
+			dataType:"json"
+		}).done(function(resp){
+			
+			if (resp.data==0){
+				let confirmaction = confirm("상품이 존재하지 않습니다.등록 하시겠습니까?");
+				if(confirmaction){
+					manager.input();			
+				}else{
+					alert("등록이 취소되었습니다")
+					location.href="/auth/manager";
+				}	
+			}else{
+					alert("상품이 존재합니다.")
+					location.href="/auth/manager";
+			}
+			
+		}).fail(function(error){
+			alert(JSON.stringify(error))
+			alert("혹은 상품이 존재합니다.")
+		})
+		
+	},
+	
 	input:function(){
 		var form = $("#input-form")[0]
 		var formdata = new FormData(form);
@@ -6,7 +36,7 @@ let manager={
        
 		let data={
 			brand_name:$("#brand_name").val(),
-			product_name:$("#product_name").val(),
+			productname:$("#product_name").val(),
 			price:$("#price").val(),
 			purpose:$("#purpose").val(),
 			material:$("#material").val(),
@@ -54,7 +84,7 @@ new Promise((succ,fail)=>{
         let dataid = $("#item_id").val();
 		let data={
 			brand_name:$("#brand_name").val(),
-			product_name:$("#product_name").val(),
+			productname:$("#product_name").val(),
 			price:$("#price").val(),
 			purpose:$("#purpose").val(),
 			material:$("#material").val(),

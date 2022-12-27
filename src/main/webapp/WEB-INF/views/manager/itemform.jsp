@@ -93,7 +93,7 @@
           
         </table>
     </form>
-        <button id="item-inputbtn" onclick="manager.input()" >저장</button>
+        <button id="item-inputbtn" onclick="manager.check()" >저장</button>
        
       
  

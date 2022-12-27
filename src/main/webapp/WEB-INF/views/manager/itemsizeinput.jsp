@@ -8,7 +8,7 @@
 				<label for="product_name">상품명</label>			
 			</th>
 			<th>
-				<input type="text" id="product_name" value="${product.product_name}" readonly>
+				<input type="text" id="product_name" value="${product.productname}" readonly>
 				<input type="hidden" id="product_id" value="${product.id }">
 			</th>
 		</tr>	

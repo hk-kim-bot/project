@@ -39,7 +39,7 @@
       </a>
     </li>
     <li class="brand">
-      <a href="">
+      <a href="/auth/old">
         <img src="images/dr.martens.webp" alt="de.martens">
         <p>martens</p>
       </a>

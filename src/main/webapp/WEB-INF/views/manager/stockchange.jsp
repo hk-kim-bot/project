@@ -9,7 +9,7 @@
  	<th>상품명
  	</th>
  	<td>
- 		<input type="text" value="${stock.product.product_name }" id="name" readonly>
+ 		<input type="text" value="${stock.product.productname }" id="name" readonly>
  		<input type="hidden" value="${stock.id }" id="id">
  	</td>
  	</tr>

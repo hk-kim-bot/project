@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -29,9 +30,19 @@ public class ItemControllerapi {
 		itemservice.이미지저장(img);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
+	@PostMapping("/api/itemimgold")
+	public ResponseDto<Integer> saveimgold(@RequestPart MultipartFile img) throws IOException{
+		itemservice.이미지저장(img);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
 	@PostMapping("/api/item")
 	public ResponseDto<Integer> save(@RequestBody green_product pd){
 	itemservice.상품입력(pd);
+	return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
+	@PostMapping("/api/itemold")
+	public ResponseDto<Integer> saveold(@RequestBody green_product pd){
+	itemservice.상품입력old(pd);
 	return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	
@@ -57,7 +68,15 @@ public class ItemControllerapi {
 		itemservice.재고변경(id,green_shoessize);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
+	@PostMapping("/api/checking")
+	public ResponseDto<Integer> checkingname(@RequestBody String productname){
+		int i =0;
+		if(itemservice.상품확인(productname)!=null) {
+			i=itemservice.상품확인(productname).getId();
+		}
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),i);
 	
+	}
 
 
 	

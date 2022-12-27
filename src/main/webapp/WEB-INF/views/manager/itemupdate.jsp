@@ -20,7 +20,7 @@
 
             </td>
             <td>
-              <input type="text" name="" id="product_name" class="" readonly value="${product.product_name}"> <!---->
+              <input type="text" name="" id="product_name" class="" readonly value="${product.productname}"> <!---->
               <input type="hidden" name="" id="item_id" value="${product.id }"><!-- id 값 저장하는 히든input-->
             </td>
           </tr>

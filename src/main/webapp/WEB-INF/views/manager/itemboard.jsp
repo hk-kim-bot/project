@@ -26,7 +26,7 @@
 		<tr class="item_info_tr"> 
     	    <td class="one"><a onclick="opendetail(this)">${product.id}</a></td> <!--update 페이지로 이동-->
         	<td class="two">${product.brand_name}</td>
-        	<td class="three">${product.product_name}</td>
+        	<td class="three">${product.productname}</td>
         	<td class="four">${product.price}</td>
       	</tr>	
 	</c:forEach>

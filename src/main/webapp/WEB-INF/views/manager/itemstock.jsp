@@ -15,7 +15,7 @@
   <c:forEach var="sizestock" items="${sizestocks.content}">
     <tr class="item_stock_info">
       <th><a onclick="changestock(this)">${sizestock.id}</a></th>
-      <th>${sizestock.product.product_name }</th>
+      <th>${sizestock.product.productname }</th>
       <th>${sizestock.item_size}</th>
       <th>${sizestock.item_stock}</th>
       <th>/</th>

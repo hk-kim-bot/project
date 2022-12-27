@@ -10,7 +10,7 @@
 		<th> 상품명
 		</th>
 		<th>
-			<p>${product.product_name }</p>
+			<p>${product.productname }</p>
 			<input type="hidden" value="${product.id }" id="id">
 		</th>
 		</tr>

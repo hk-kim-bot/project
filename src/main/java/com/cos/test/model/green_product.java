@@ -12,6 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,8 +39,9 @@ public class green_product {
 	
 	@Column(nullable=false, length=30)
 	private String brand_name;  //브랜드 이름  
-	@Column(nullable=false, length=30,unique=true)
-	private String product_name;  //상품 이름
+	@Column(nullable=false, length=30)
+	private String productname;  //상품 이름
+	
 	@Column(nullable=false, length=30)
 	private int  price;  //가격
 	@Lob
