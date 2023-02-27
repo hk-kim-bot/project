@@ -1,0 +1,364 @@
+* {margin : 0;  padding : 0;}
+
+
+
+#container {
+    width: 1100px;
+    margin : auto;    
+    display: flex;    
+}
+
+#sidebar {    
+    width : 15%;    
+    position: fixed;
+}
+
+h1 {
+    padding-top: 30px;
+    padding-bottom: 13px;
+    font-size: 30px;
+    
+}
+
+#sidebar .info_my {
+    padding-top: 40px;
+    
+}
+
+.info_my .navi {
+    padding-top: 15px;  
+    font-size: 13px;
+}
+
+.info_my li {
+    margin-top : 10px;
+}
+
+a{
+    color: gray;
+}  
+
+ 
+.info_my  a:hover {
+  
+    text-decoration: underline;
+  }
+
+
+#content {    
+    width : 85%;    
+    margin-left : 200px;
+}
+
+
+
+#profil {
+    margin-top: 50px;
+    width: 100%;    
+    height: 200px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+     
+}
+
+#profil #profilbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width :100%;
+    height: 150px;
+    border: 2px solid gray;
+    
+}
+
+#profil #user_profil {
+    width : 12% ;
+    height: 100%;    
+    margin-left : 10px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+}
+#profil #user_profil img{
+    width : 80% ;
+    height: 80%;    
+}
+#profil #user_profil01 {    
+    width: 40%;
+    height: 100%;     
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+#profil #user_profil01 span {
+    font-size: 18px;
+}
+
+
+#profil #user_profil01 .profil_class {
+    font-size: 14px;
+}
+#profil #user_profil01 .profil_class2 {
+    font-size: 12px;
+}
+
+#profil #user_profil02 .profil_side {
+    color: black;
+}
+#profil #user_profil04 .profil_side {
+    color: black;
+}
+
+
+
+#profil #user_profil02 a:hover {
+    text-decoration-line:none;
+  }
+  #profil #user_profil04 a:hover {
+    text-decoration-line:none;
+  }
+
+#profil #user_profil02 {   
+    width: 20%;
+    height: 60%;    
+    border-left: 2px solid gray;
+}
+#profil #user_profil02 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;    
+    text-align: right;
+}
+
+#profil #user_profil04 {
+    
+    border-left: 2px solid gray;
+    height : 60%;    
+    width: 20%;  
+}
+#profil #user_profil04 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;    
+    text-align: right;
+}
+
+
+
+
+
+#recentorder {
+    width : 100%;
+    height: 250px;
+    margin-top : 50px;
+    
+}
+#recentorder #recentordertitle {
+    font-size : 20px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid black;
+}
+
+#orderprocess {
+    border-bottom: 1px solid gray;
+}
+
+
+#orderprocess a {
+    color: black;
+}
+
+#orderprocess a:hover {
+    text-decoration-line:none;
+
+}
+
+#recentorder ul {
+    display: flex;
+    justify-content: space-around;    
+    align-items: center;
+    height: 130px;        
+}
+#recentorder ul .ordercount {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+#recentorder ul li {
+    padding-top : 5px;
+}
+
+#recentorder #orderchange {
+    height: 50px;   
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+}
+
+#recentorder #orderchange a{
+    color: black;
+}
+#recentorder #orderchange a:hover{
+    text-decoration-line: none;
+}
+
+
+#mychoice {
+    width : 100%;
+    height : 400px;    
+}
+#mychoice #mychoicetitle {
+    font-size : 20px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid black;   
+}
+#mychoice #mychoicetitle a:hover {
+    text-decoration: none;
+}
+#mychoice #mychoicetitle ul {
+    display: flex;
+}
+
+#mychoice #mychoiceproduct {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+#mychoice #mychoiceproduct li {
+    width : 24%;
+    height: 100%;
+    
+}
+#mychoice #mychoiceproduct li .productimg {
+    height: 60%;
+    
+}
+
+#mychoice #mychoiceproduct li img {
+    width : 100%;
+    height: 100%;
+}
+#mychoice #mychoiceproduct .productbrand {
+    color : black;
+    font-weight: bold;
+    margin-top : 10px;
+}
+#mychoice #mychoiceproduct .productname {
+    color: gray;
+    margin-top: 10px;
+}
+#mychoice #mychoiceproduct .productprice {
+    display: flex;
+    align-items:flex-end;
+    height: 30px;
+    
+}
+.discountprice {
+    color : red;
+    font-size: 20px;
+    
+}
+
+
+#buy {
+    width : 100%;
+    height: 400px;   
+}
+#buy #buytitle {
+    font-size : 20px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid black;
+}
+#buy #buyproduct {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+#buy #buyproduct li {
+    width : 24%;
+    height: 100%;
+}
+
+#buyproduct li .productimg {
+    height: 60%;    
+    
+}
+
+#buyproduct li img {
+    width : 100%;
+    height: 100%;
+}
+.productbrand {
+    color : black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top : 10px;
+}
+#buyproduct .productname {
+    color: gray;
+    margin-top: 10px;
+}
+#buyproduct .productprice {
+    display: flex;
+    align-items:flex-end;
+    height: 30px;
+    
+}
+
+#sell {
+    width : 100%;
+    height: 400px;    
+}
+#sell #selltitle {
+    font-size : 20px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 2px solid black;
+}
+#sell #sellproduct {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+   
+}
+#sell #sellproduct li {
+    width : 24%;
+    height: 100%;
+    
+}
+
+#sellproduct li .productimg {
+    height: 60%;            
+}
+
+#sellproduct li .productimg img {
+    width : 100%;
+    height: 100%;
+}
+#sellproduct .productbrand {
+    color : black;
+    font-weight: bold;
+    margin-top : 10px;
+}
+#sellproduct .productname {
+    color: gray;
+    margin-top: 10px;
+}
+#sellproduct .productprice {
+    display: flex;
+    align-items:flex-end;
+    height: 30px;
+    
+}
+
+
+

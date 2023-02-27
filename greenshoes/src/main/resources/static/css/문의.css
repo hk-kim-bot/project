@@ -1,0 +1,93 @@
+header {    
+  height: 70px;
+  background-color: #eee;
+  text-align: center;
+  line-height: 70px;
+}
+a {
+  text-decoration : none;
+  color: inherit;
+}
+
+
+footer{
+  margin-top : 800px;
+  height: 250px;
+  padding-top: 10px;
+  padding-bottom : 10px;
+  background-color: rgb(192, 192, 192);   
+}
+
+#Inquiry-wrap {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  margin: -150px 0px 0px -250px;
+  top: 35%;
+  left: 50%;
+  padding: 5px;
+  border: 0.5px solid rgb(185, 181, 181);
+  border-radius: 4px;
+
+}
+
+
+
+/* #Inquiry-form {
+  padding-left: 20px;
+} */
+
+li {
+  padding-top: 5px;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 25px;
+  padding-top: 20px;
+}
+
+
+#Inquiry-form > ul > li > input{
+  height: 25px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+}
+
+/* #Inquiry-form > ul > li > textarea {
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+
+} */
+
+#Inquiry-form > ul > li > #memo > input  {
+  height: 200px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+
+} 
+
+
+#Inquiry-form > ul > li > input[type="submit"]{
+  color: #fff;
+  font-size: 16px;
+  background-color: #424046;
+  margin-top: 10px;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+#Inquiry-form > ul > #Inquiry_submit {
+  text-align: center;
+}

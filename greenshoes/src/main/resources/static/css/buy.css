@@ -1,0 +1,244 @@
+* {margin : 0;  padding : 0;}
+#container {
+  width: 100%;
+  margin : auto;    
+  display: flex;    
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  width:70%;
+}
+.cart_img img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+table {
+  border-top: solid 1.5px black;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+thead {
+  text-align: center;
+  font-weight: bold;
+}
+tbody {
+  font-size: 12px;
+}
+td {
+  padding: 15px 0px;
+  border-bottom: 1px solid lightgrey;
+}
+.cart_list_detail :nth-child(3) a {
+  font-size: 12px;
+}
+.cart_list_detail :nth-child(3) p {
+  font-weight: bold;
+}
+.cart_list_option {
+  padding: 20px;
+}
+.cart_list_option p::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  top: 25px;
+  position: absolute;
+}
+.cart_list_optionbtn {
+  background-color: white;
+  margin-left:3%;
+  font-size: 11px;
+  border: lightgrey solid 1px;
+  padding: 7px;
+}
+.cart_list_orderbtn {
+  cursor:pointer
+}
+.cart_list_detail :nth-child(4),
+.cart_list_detail :nth-child(5),
+.cart_list_detail :nth-child(6) {
+  border-left: 2px solid whitesmoke;
+}
+
+.cart_list_detail {
+  text-align: center;
+}
+.cart_list_detail :nth-child(5) button {
+  background-color:rgb(114, 147, 67);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.price {
+  font-weight: bold;
+}
+.cart_mainbtns {
+  width: 420px;
+  height: 200px;
+  padding-top: 40px;
+  display: block;
+  margin: auto;
+}
+.cart_bigorderbtn {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  margin: auto;
+  border-radius: 5px;
+}
+.cart_bigorderbtn.left {
+  background-color: white;
+  border: 1px lightgray solid;
+}
+.cart_bigorderbtn.right {
+  background-color: limegreen;
+  color: white;
+  border: none;
+}
+.main_content {
+  width:70%;
+  display: flex;
+  flex-direction: column;
+  height: 1300px;
+  flex-wrap: wrap;
+}
+.mainbox {
+  width: 70%;
+  margin-left:20%;
+  margin-top: 3%;
+}
+.mainbox h2 {
+  border-bottom: 1px lightgrey solid;
+}
+.user_info_list {
+  border-bottom: 1px lightgrey solid;
+  list-style: none;
+  height: 60px;
+}
+.info_text::after {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: red;
+  content: "";
+  vertical-align: middle;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+.input_text {
+  width:70%;
+  height:30px;
+}
+.buy_info_list {
+  list-style: none;
+}
+.buy_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom:1px lightgray solid;
+}
+.select_box {
+  width: 250px;
+  height:30px;
+}
+.buy_guide {
+  font-size: 12px;
+  margin-top:2%;  
+}
+.sidebox {
+  width:30%;
+  margin-left: 20px;
+  height: 300px;
+  position:sticky;
+  right:0;
+  top:0;
+  align-self: flex-start;
+}
+.tittle1 {
+  border-bottom: solid 2px black;
+}
+
+.right_box_top {
+  border-top-style: none;
+  width:100%;
+  border: 1px lightgray solid;
+  border-bottom: none;
+}
+.right_box_price {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.total_price {
+  display: flex;
+  width:100%;
+  height: auto;
+  justify-content: space-between;
+  border: 1px lightgray solid;
+}
+.right_box_text {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin:5%;
+}
+.last_price {
+  margin:5%;
+  color:red;
+  font-weight: bold;
+}
+.buy_button button {
+  width: 100%;
+  cursor:pointer;
+}
+.buy_button button {
+  margin-top: 10%;
+  width:100%;
+  height: 50px;
+  background-color: black;
+  color:#eee;
+}
+.buy_type {
+  width: 30%;
+  margin-top: 5%;
+  display:flex;
+  flex-direction: row;
+}
+.buy_type input {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  transition: border 0.2s ease-in-out;
+  margin-right:3px;
+}
+
+.buy_type input:checked {
+  border: 0.4em solid limegreen;
+}
+.buy_type input:hover {
+  box-shadow: 0 0 0 max(3px, 0.2em) lightgray;
+  cursor: pointer;
+}
+.buy_type img {
+  margin-bottom:10%;
+}
